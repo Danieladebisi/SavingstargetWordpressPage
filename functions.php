@@ -15,8 +15,16 @@ function savingstarget_theme_setup() {
     // Add support for HTML5 markup
     add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 
-    // Remove sidebar widget support
-    unregister_sidebar( 'sidebar-1' );
+    // Register sidebar (Optional: Remove if not needed)
+    register_sidebar( array(
+        'name'          => __( 'Sidebar', 'savingstarget' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Add widgets here.', 'savingstarget' ),
+        'before_widget' => '<div class="widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 }
 add_action( 'after_setup_theme', 'savingstarget_theme_setup' );
 

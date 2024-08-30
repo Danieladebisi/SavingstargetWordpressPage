@@ -1,37 +1,28 @@
 <?php
+// Theme setup
+function savingstarget_theme_setup() {
+    // Enable support for title tag
+    add_theme_support( 'title-tag' );
 
-// Register navigation menu
-function savingstarget_register_menus() {
-    register_nav_menus(array(
-        'primary-menu' => __('Primary Menu', 'savingstarget')
-    ));
+    // Enable support for post thumbnails
+    add_theme_support( 'post-thumbnails' );
+
+    // Register primary menu
+    register_nav_menus( array(
+        'primary' => __( 'Primary Menu', 'savingstarget' ),
+    ) );
+
+    // Add support for HTML5 markup
+    add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
+
+    // Remove sidebar widget support
+    unregister_sidebar( 'sidebar-1' );
 }
-add_action('init', 'savingstarget_register_menus');
+add_action( 'after_setup_theme', 'savingstarget_theme_setup' );
 
 // Enqueue styles and scripts
-function savingstarget_enqueue_scripts() {
-    wp_enqueue_style('savingstarget-style', get_stylesheet_uri());
-    wp_enqueue_script('navigation-toggle', get_template_directory_uri() . '/js/navigation-toggle.js', array('jquery'), '1.0', true);
+function savingstarget_enqueue_styles() {
+    wp_enqueue_style( 'savingstarget-style', get_stylesheet_uri() );
 }
-add_action('wp_enqueue_scripts', 'savingstarget_enqueue_scripts');
-
-// Disable sidebar
-function savingstarget_remove_sidebar() {
-    unregister_sidebar('sidebar-1');
-}
-add_action('widgets_init', 'savingstarget_remove_sidebar');
-
-// Optimize WordPress performance
-function savingstarget_optimize() {
-    remove_action('wp_head', 'wp_generator');
-    remove_action('wp_head', 'rsd_link');
-    remove_action('wp_head', 'wlwmanifest_link');
-    remove_action('wp_head', 'wp_shortlink_wp_head');
-    remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
-    remove_action('wp_head', 'rel_canonical');
-    remove_action('wp_head', 'wp_resource_hints', 2);
-}
-add_action('after_setup_theme', 'savingstarget_optimize');
-
-// Add theme support for title tag
-add_theme_support('title-tag');
+add_action( 'wp_enqueue_scripts', 'savingstarget_enqueue_styles' );
+?>

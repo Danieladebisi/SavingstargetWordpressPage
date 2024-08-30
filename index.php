@@ -2,19 +2,17 @@
 
 <div class="container">
     <div class="main-content">
-        <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : the_post(); ?>
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <h2 class="entry-title"><?php the_title(); ?></h2>
-                    <div class="entry-content">
-                        <?php the_content(); ?>
-                    </div>
-                </article>
-            <?php endwhile; ?>
-        <?php else : ?>
-            <p><?php _e('Sorry, no posts matched your criteria.', 'savingstarget'); ?></p>
-        <?php endif; ?>
-    </div>
-</div>
+        <?php
+        if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+                get_template_part( 'content', get_post_format() );
+            endwhile;
+            the_posts_navigation();
+        else :
+            get_template_part( 'content', 'none' );
+        endif;
+        ?>
+    </div> <!-- End of .main-content -->
+</div> <!-- End of .container -->
 
 <?php get_footer(); ?>

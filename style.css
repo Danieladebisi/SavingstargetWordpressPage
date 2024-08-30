@@ -1,0 +1,97 @@
+/*
+Theme Name: SavingsTarget Blog Theme
+Theme URI: https://savingstarget.com
+Author: [Your Name]
+Author URI: https://savingstarget.com
+Description: A custom theme for SavingsTarget's blog page.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, custom-theme, savingstarget
+Text Domain: savingstarget
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #114070;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav {
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #6e8ba8;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+footer {
+    background-color: #114070;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.blog-post {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.blog-post h2 {
+    color: #114070;
+}
+
+.sidebar {
+    background: #6e8ba8;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+}
+
+.content-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.main-content {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.sidebar-content {
+    flex: 1;
+}

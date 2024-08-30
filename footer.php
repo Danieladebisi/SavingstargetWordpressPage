@@ -1,6 +1,9 @@
 <footer>
-    <p>&copy; 2024 SavingsTarget. All rights reserved.</p>
+    <div class="container">
+        <p>&copy; <?php echo date('Y'); ?> SavingsTarget. All rights reserved.</p>
+    </div>
 </footer>
+
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -1,160 +1,99 @@
 /*
-Theme Name: SavingsTarget Blog Theme
-Theme URI: https://savingstarget.com
-Author: [Your Name]
-Author URI: https://savingstarget.com
-Description: A custom theme for SavingsTarget's blog page.
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, custom-theme, savingstarget
-Text Domain: savingstarget
+Theme Name: SavingsTarget Fast Theme
+Author: Daniel
+Version: 2.0
+Description: A lightweight, fast WordPress theme for SavingsTarget.
 */
 
-/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-a {
-    color: #114070;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #ff6600;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #114070;
-}
-
-/* Header Styles */
-.site-header {
+header {
     background-color: #114070;
-    color: #fff;
     padding: 20px 0;
 }
 
-.site-header .container {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.site-header .logo h1 a {
-    color: #fff;
+header .logo {
+    color: #ffffff;
+    font-size: 24px;
     text-decoration: none;
-    font-size: 2.5rem;
 }
 
-.main-navigation {
-    background-color: #6e8ba8;
-    padding: 10px 0;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center;
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.nav-menu li {
-    margin: 0 15px;
-}
-
-.nav-menu a {
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-}
-
-.nav-menu a:hover {
-    background-color: #ff6600;
-    color: #fff;
-    border-radius: 5px;
-}
-
-/* Content Styles */
-.content-area {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px;
 }
 
-.main-content {
-    flex: 3;
+nav ul li {
     margin-right: 20px;
 }
 
-.blog-post {
-    background: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.blog-post h2 {
-    color: #114070;
-    font-size: 2rem;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-.blog-post .post-thumbnail img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.blog-post .post-meta {
-    color: #6e8ba8;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 10px;
-    color: #fff;
-    background-color: #ff6600;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.read-more:hover {
-    background-color: #114070;
-}
-
-/* Sidebar Styles */
-.sidebar-content {
-    flex: 1;
-}
-
-.sidebar {
-    background: #6e8ba8;
-    color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.sidebar h2 {
-    font-size: 1.5rem;
-}
-
-/* Footer Styles */
 footer {
     background-color: #114070;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.footer a {
-    color: #ff6600;
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-content {
+    margin: 20px 0;
+}
+
+.contact-form, .contact-info {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #00c853;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #00b843;
 }
